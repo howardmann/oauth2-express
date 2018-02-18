@@ -1,10 +1,6 @@
 FROM node:carbon
 LABEL maintainer="howieburger"
 
-# Install vim
-RUN ["apt-get", "update"]
-RUN ["apt-get", "install", "-y", "vim"]
-
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

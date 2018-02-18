@@ -1,8 +1,8 @@
-require('dotenv').config()
+let path = require('path')
+require('dotenv').config({ path: path.join(__dirname, '/./../.env') })
 
 let godigital = module.exports = {}
 
-// Dependencies
 let AWS = require('aws-sdk');
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY,
